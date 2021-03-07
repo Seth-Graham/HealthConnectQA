@@ -150,6 +150,8 @@ public class NewJFrame extends javax.swing.JFrame {
   }// </editor-fold>
 
   private void LoginAsPatientActionPerformed(java.awt.event.ActionEvent evt) {
+    Database.connectToDatabase();
+
     // TODO add your handling code here:
     String sql ="select * from Patient where username=? and password=?";
     try{
@@ -190,6 +192,9 @@ public class NewJFrame extends javax.swing.JFrame {
   }
 
   private void LoginAsDoctorActionPerformed(java.awt.event.ActionEvent evt) {
+
+    Database.connectToDatabase();
+
     // TODO add your handling code here:
     String sql ="select * from Doctor where username=? and password=?";
     try{

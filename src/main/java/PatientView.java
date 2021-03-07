@@ -91,7 +91,7 @@ public final class PatientView extends javax.swing.JFrame {
     });
 
     jList1.setModel(new javax.swing.AbstractListModel() {
-      String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+      String[] strings = {};
       public int getSize() { return strings.length; }
       public Object getElementAt(int i) { return strings[i]; }
     });

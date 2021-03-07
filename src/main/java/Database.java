@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 public class Database {
 
-  private static String dbFileLocation = "jdbc:sqlite:src/main/resources/HealthConnectDB.sqlite";
+  private static String dbFileLocation = "jdbc:sqlite:src/main/resources/HealthConnectDB.db";
   private static String username = "";
   private static String password = "";
   public static Connection connection = null;
@@ -14,6 +14,7 @@ public class Database {
     try {
       Class.forName("org.sqlite.JDBC");
       connection = DriverManager.getConnection(dbFileLocation, username, password);
+      System.out.println("Connection to database has been established.");
 
     } catch (ClassNotFoundException e) {
       e.printStackTrace();
