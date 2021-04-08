@@ -24,11 +24,12 @@ public class NewJFrame extends javax.swing.JFrame {
 
 
     public String getUsername() {
-        return this.username;
+        return txt_username.getText();
     }
 
+
     public void setUsername(String username) {
-        this.username = this.txt_username.getText();
+        txt_username.setText(username);
     }
 
     /**
@@ -38,7 +39,8 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
-    private void initComponents() {
+    // TODO: Set to private once testing has been completed.
+    public void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
         txt_username = new javax.swing.JTextField();
@@ -150,7 +152,8 @@ public class NewJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-    private void LoginAsPatientActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: Set method to public once testing is finished.
+    public void LoginAsPatientActionPerformed(java.awt.event.ActionEvent evt) {
         Database.getConnection();
 
         String sql = "select * from Patient where username=? and password=?";
@@ -183,11 +186,10 @@ public class NewJFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, e);
             }
         }
-
-
     }
 
-    private void LoginAsDoctorActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: Set to private once testing has finished.
+    public void LoginAsDoctorActionPerformed(java.awt.event.ActionEvent evt) {
 
         Database.getConnection();
 
@@ -219,15 +221,15 @@ public class NewJFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, e);
             }
         }
-
-
     }
 
-    private void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: Set to private once testing has finished.
+    public void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
-    private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: Set to private once testing has finished.
+    public void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
@@ -261,15 +263,16 @@ public class NewJFrame extends javax.swing.JFrame {
         });
     }
 
+    // TODO: Change values back to public once testing has been finished.
     // Variables declaration - do not modify
-    private javax.swing.JButton LoginAsDoctor;
-    private javax.swing.JButton LoginAsPatient;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JPasswordField txt_password;
+    public javax.swing.JButton LoginAsDoctor;
+    public javax.swing.JButton LoginAsPatient;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel4;
+    public javax.swing.JSeparator jSeparator1;
+    public javax.swing.JPasswordField txt_password;
     public javax.swing.JTextField txt_username;
     // End of variables declaration
 }

@@ -188,7 +188,11 @@ public class NewRequests extends javax.swing.JFrame {
                     pst.setString(3, timestamp);
                     pst.setString(4, "New");
                     pst.execute();
-                } catch (SQLException | HeadlessException e) {
+                } catch (SQLException e) {
+                    JOptionPane.showMessageDialog(null, e);
+
+                } catch (HeadlessException e) {
+                    e.printStackTrace();
                     JOptionPane.showMessageDialog(null, e);
                 } finally {
                     try {

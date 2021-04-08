@@ -211,7 +211,8 @@ public final class DoctorView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-    private void newRequestButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: Change back to private once finished testing.
+    public void newRequestButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         viewedRequests.setText("New Requests");
         requestsList.setVisible(true);
@@ -249,7 +250,8 @@ public final class DoctorView extends javax.swing.JFrame {
         }
     }
 
-    private void inProgressButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: Change back to private after testing has been finished.
+    public void inProgressButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         viewedRequests.setText("In Progress Requests");
         requestsList.setVisible(true);
@@ -395,19 +397,20 @@ public final class DoctorView extends javax.swing.JFrame {
         });
     }
 
+    // TODO: Change back to private once testing is finished.
     // Variables declaration - do not modify
-    private javax.swing.JButton closeRequestButton;
-    private javax.swing.JButton inProgressButton;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JButton logout;
-    private javax.swing.JButton newRequestButton;
-    private javax.swing.JButton openSelectedButton;
-    private javax.swing.JList requestsList;
-    private javax.swing.JLabel viewedRequests;
-    private javax.swing.JLabel welcome;
+    public javax.swing.JButton closeRequestButton;
+    public javax.swing.JButton inProgressButton;
+    public javax.swing.JLabel jLabel5;
+    public javax.swing.JLabel jLabel6;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JSeparator jSeparator1;
+    public javax.swing.JButton logout;
+    public javax.swing.JButton newRequestButton;
+    public javax.swing.JButton openSelectedButton;
+    public javax.swing.JList requestsList;
+    public javax.swing.JLabel viewedRequests;
+    public javax.swing.JLabel welcome;
     // End of variables declaration
 }
 

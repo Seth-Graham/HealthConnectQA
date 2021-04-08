@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DoctorViewTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-04-06T22:56:44" hostname="LAPTOP-OBBMJB27" time="2.586">
+  <properties/>
+  <testcase name="getSetRID()" classname="DoctorViewTest" time="0.02"/>
+  <testcase name="newRequestButtonActionPerformedFailed()" classname="DoctorViewTest" time="0.781"/>
+  <testcase name="newRequestButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.642"/>
+  <testcase name="inProgressButtonActionPerformedFailed()" classname="DoctorViewTest" time="0.584"/>
+  <testcase name="inProgressButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.539"/>
+  <testcase name="getUserType()" classname="DoctorViewTest" time="0.008"/>
+  <testcase name="getUsername()" classname="DoctorViewTest" time="0.009"/>
+  <system-out><![CDATA[SQLException in isRequestAvailable: [SQLITE_ERROR] SQL error or missing database (no such column: Request)
+false
+SQLException in isRequestAvailable: [SQLITE_ERROR] SQL error or missing database (no such column: Request)
+false
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

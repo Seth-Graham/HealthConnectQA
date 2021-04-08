@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.sql.PreparedStatement;
@@ -145,6 +146,25 @@ class NewRequestsTest {
                 " Added by Patient testPatient"));
     }
 
+    @Test
+    @DisplayName("Calling Login.main")
+    void testMain(){
+        NewRequests.main(new String[]{"arg1", "arg2", "arg3"});
+    }
+
+    @Test
+    void testGetTextArea1() {
+
+        String testValue = "Test";
+
+        NewRequests newRequests = new NewRequests("Test Patient");
+
+        newRequests.setJTextArea1("Test");
+        String getValue = newRequests.getJTextArea1();
+
+        assertEquals(testValue, getValue);
+    }
+
     public static int getMaxRID() {
         int maxID = 0;
 
@@ -187,6 +207,4 @@ class NewRequestsTest {
         System.out.println(returnVal);
         return returnVal;
     }
-
-
 }

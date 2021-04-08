@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="NewRequestsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-04-06T22:56:39" hostname="LAPTOP-OBBMJB27" time="5.141">
+  <properties/>
+  <testcase name="createButtonActionPerformedPassingValues()" classname="NewRequestsTest" time="2.889"/>
+  <testcase name="testMain()" classname="NewRequestsTest" time="0.09"/>
+  <testcase name="CancelButtonActionPerformed()" classname="NewRequestsTest" time="0.171"/>
+  <testcase name="testGetTextArea1()" classname="NewRequestsTest" time="0.02"/>
+  <testcase name="initComponents()" classname="NewRequestsTest" time="0.024"/>
+  <testcase name="createButtonActionPerformedBlankMessage()" classname="NewRequestsTest" time="1.944"/>
+  <system-out><![CDATA[Connection to database has been established.
+false
+true
+false
+false
+false
+false
+]]></system-out>
+  <system-err><![CDATA[Exception in thread "AWT-EventQueue-0" java.lang.ClassCastException: class javax.swing.plaf.nimbus.DerivedColor$UIResource cannot be cast to class javax.swing.Painter (javax.swing.plaf.nimbus.DerivedColor$UIResource and javax.swing.Painter are in module java.desktop of loader 'bootstrap')
+	at java.desktop/javax.swing.plaf.nimbus.NimbusStyle.getBackgroundPainter(NimbusStyle.java:722)
+	at java.desktop/javax.swing.plaf.nimbus.SynthPainterImpl.paintBackground(SynthPainterImpl.java:100)
+	at java.desktop/javax.swing.plaf.nimbus.SynthPainterImpl.paintPanelBackground(SynthPainterImpl.java:958)
+	at java.desktop/javax.swing.plaf.synth.SynthPanelUI.update(SynthPanelUI.java:152)
+	at java.desktop/javax.swing.JComponent.paintComponent(JComponent.java:797)
+	at java.desktop/javax.swing.JComponent.paint(JComponent.java:1074)
+	at java.desktop/javax.swing.JComponent.paintToOffscreen(JComponent.java:5255)
+	at java.desktop/javax.swing.RepaintManager$PaintManager.paintDoubleBufferedFPScales(RepaintManager.java:1707)
+	at java.desktop/javax.swing.RepaintManager$PaintManager.paintDoubleBuffered(RepaintManager.java:1616)
+	at java.desktop/javax.swing.RepaintManager$PaintManager.paint(RepaintManager.java:1556)
+	at java.desktop/javax.swing.RepaintManager.paint(RepaintManager.java:1323)
+	at java.desktop/javax.swing.JComponent._paintImmediately(JComponent.java:5203)
+	at java.desktop/javax.swing.JComponent.paintImmediately(JComponent.java:5013)
+	at java.desktop/javax.swing.RepaintManager$4.run(RepaintManager.java:865)
+	at java.desktop/javax.swing.RepaintManager$4.run(RepaintManager.java:848)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:848)
+	at java.desktop/javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:823)
+	at java.desktop/javax.swing.RepaintManager.prePaintDirtyRegions(RepaintManager.java:772)
+	at java.desktop/javax.swing.RepaintManager$ProcessingRunnable.run(RepaintManager.java:1890)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+]]></system-err>
+</testsuite>
