@@ -44,7 +44,7 @@ public class NewRequests extends javax.swing.JFrame {
         }
 
         RequestID.setText("RequestID: " + count);
-        PatientID.setText("PatientID: " + userID);
+        PatientID.setText("PatientID: " + userID.trim());
         jTextArea1.setLineWrap(true);
         jTextArea1.setWrapStyleWord(true);
 
@@ -176,7 +176,7 @@ public class NewRequests extends javax.swing.JFrame {
                     StringBuilder stringBuilder = new StringBuilder();
                     stringBuilder.append("\n");
                     stringBuilder.append(jTextArea1.getText());
-                    stringBuilder.append("\n Added by ").append("Patient").append(" ").append(userID);
+                    stringBuilder.append("\n Added by ").append("Patient").append(" ").append(userID.trim());
                     String finalString = stringBuilder.toString();
                     pst.setString(4, finalString);
                     pst.execute();
@@ -184,7 +184,7 @@ public class NewRequests extends javax.swing.JFrame {
                     sql = "insert into Request (RID, PUsername, Date, Status) values (?, ?, ?, ?)";
                     pst = Database.connection.prepareStatement(sql);
                     pst.setString(1, temp);
-                    pst.setString(2, userID);
+                    pst.setString(2, userID.stripLeading().trim());
                     pst.setString(3, timestamp);
                     pst.setString(4, "New");
                     pst.execute();

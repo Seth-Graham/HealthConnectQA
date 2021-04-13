@@ -4,47 +4,16 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.awt.event.ActionEvent;
-import java.sql.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class NewJFrameTest {
 
     @BeforeEach
-    @AfterEach
-    public void defaultPatientTable() {
+    public void initTables() {
         // Set the database to the expected default state.
-        try {
-            Database.getConnection();
-            Statement s = Database.connection.createStatement();
-
-            String sql = "CREATE TABLE IF NOT EXISTS Patient (\n" +
-                    "   Name VARCHAR(255) NOT NULL, \n " +
-                    "   Username VARCHAR(255) NOT NULL, \n" +
-                    "   Password VARCHAR(255) NOT NULL)";
-            s.execute("DROP TABLE Patient");
-            s.execute(sql);
-            s.execute("INSERT INTO Patient (Name, Username, Password) VALUES "
-                    + "('Seth', 'stg', '1234');");
-        } catch (SQLException ignored) {}
-    }
-
-    @BeforeEach
-    @AfterEach
-    public void defaultDoctorTable() {
-        // Set the database to the expected default state.
-        try {
-            Database.getConnection();
-            Statement s = Database.connection.createStatement();
-
-            String sql = "CREATE TABLE IF NOT EXISTS Doctor (\n" +
-                    "   Username VARCHAR(255) NOT NULL, \n " +
-                    "   Password VARCHAR(255) NOT NULL)";
-            s.execute("DROP TABLE Doctor");
-            s.execute(sql);
-            s.execute("INSERT INTO Doctor (Username, Password) VALUES "
-                    + "('drstg', '1234');");
-        } catch (SQLException ignored) {}
+        DatabaseTestMethods.defaultPatientTable();
+        DatabaseTestMethods.defaultDoctorTable();
     }
 
     @Test
@@ -79,7 +48,7 @@ class NewJFrameTest {
         NewJFrame newJFrame = new NewJFrame();
 
         // Ensure the Patient already exists.
-        assertTrue(isPatientAvailable("stg"));
+        assertTrue(DatabaseTestMethods.isPatientAvailable("stg"));
 
         //Setup the GUI
         newJFrame.initComponents();
@@ -100,7 +69,7 @@ class NewJFrameTest {
         NewJFrame newJFrame = new NewJFrame();
 
         // Ensure the Patient already exists.
-        assertFalse(isPatientAvailable("test"));
+        assertFalse(DatabaseTestMethods.isPatientAvailable("test"));
 
         //Setup the GUI
         newJFrame.initComponents();
@@ -120,7 +89,7 @@ class NewJFrameTest {
         NewJFrame newJFrame = new NewJFrame();
 
         // Ensure the Patient already exists.
-        assertTrue(isDoctorAvailable("drstg"));
+        assertTrue(DatabaseTestMethods.isDoctorAvailable("drstg"));
 
         //Setup the GUI
         newJFrame.initComponents();
@@ -140,7 +109,7 @@ class NewJFrameTest {
         NewJFrame newJFrame = new NewJFrame();
 
         // Ensure the Patient already exists.
-        assertFalse(isDoctorAvailable("drtest"));
+        assertFalse(DatabaseTestMethods.isDoctorAvailable("drtest"));
 
         //Setup the GUI
         newJFrame.initComponents();
@@ -183,43 +152,7 @@ class NewJFrameTest {
         NewJFrame.main(new String[]{"arg1", "arg2", "arg3"});
     }
 
-    public static boolean isPatientAvailable(String testString) {
-        boolean returnVal = false;
 
-        try {
 
-            PreparedStatement pst = Database.connection.prepareStatement("select * from Patient where Username = ?");
-            pst.setString(1, testString);
 
-            ResultSet rs = pst.executeQuery();
-
-            if (rs.next()) returnVal = true;
-
-        } catch (SQLException e) {
-            System.out.println("SQLException in isPatientAvailable: " + e.getMessage());
-        }
-
-        System.out.println(returnVal);
-        return returnVal;
-    }
-
-    public static boolean isDoctorAvailable(String testString) {
-        boolean returnVal = false;
-
-        try {
-
-            PreparedStatement pst = Database.connection.prepareStatement("select * from Doctor where Username = ?");
-            pst.setString(1, testString);
-
-            ResultSet rs = pst.executeQuery();
-
-            if (rs.next()) returnVal = true;
-
-        } catch (SQLException e) {
-            System.out.println("SQLException in isDoctorAvailable: " + e.getMessage());
-        }
-
-        System.out.println(returnVal);
-        return returnVal;
-    }
 }

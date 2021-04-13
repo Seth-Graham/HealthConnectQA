@@ -227,10 +227,10 @@ public final class DoctorView extends javax.swing.JFrame {
             rs = pst.executeQuery();
             if (rs.next()) {
                 //JOptionPane.showMessageDialog(null, "Username and Password is correct");
-                element = rs.getString("RID") + "        " + rs.getString("Date") + "           " + rs.getString("PUsername");
+                element = rs.getString("RID") + "        " + rs.getString("Date") + "                     " + rs.getString("PUsername");
                 model.addElement(element);
                 while (rs.next()) {
-                    element = rs.getString("RID") + "        " + rs.getString("Date") + "           " + rs.getString("PUsername");
+                    element = rs.getString("RID") + "        " + rs.getString("Date") + "                     " + rs.getString("PUsername");
                     model.addElement(element);
                 }
                 requestsList.setModel(model);
@@ -256,21 +256,20 @@ public final class DoctorView extends javax.swing.JFrame {
         viewedRequests.setText("In Progress Requests");
         requestsList.setVisible(true);
         String element;
-        String sql = "select distinct Request.RID, Date, PUsername from Request, Message where Request.RID = Message.RID and Request.Status=? and Message.DUsername=?";
+        String sql = "select distinct Request.RID, Status, Date, PUsername from Request, Message where Request.RID = Message.RID and Request.Status=?";
         model.removeAllElements();
         element = "RID        Date                                        Patient Username";
         model.addElement(element);
         try {
             pst = Database.connection.prepareStatement(sql);
             pst.setString(1, "In Progress");
-            pst.setString(2, username);
             rs = pst.executeQuery();
             if (rs.next()) {
                 //JOptionPane.showMessageDialog(null, "Username and Password is correct");
-                element = rs.getString("RID") + "        " + rs.getString("Date") + "           " + rs.getString("PUsername");
+                element = rs.getString("RID") + "        " + rs.getString("Date") + "                     " + rs.getString("PUsername");
                 model.addElement(element);
                 while (rs.next()) {
-                    element = rs.getString("RID") + "        " + rs.getString("Date") + "           " + rs.getString("PUsername");
+                    element = rs.getString("RID") + "        " + rs.getString("Date") + "                     " + rs.getString("PUsername");
                     model.addElement(element);
                 }
                 requestsList.setModel(model);
@@ -290,7 +289,8 @@ public final class DoctorView extends javax.swing.JFrame {
         }
     }
 
-    private void openSelectedButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: Change back to private once testing has been finished.
+    public void openSelectedButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (requestsList.getSelectedIndex() != -1) {
             String temp_requestID = requestsList.getSelectedValue().toString();
@@ -310,31 +310,31 @@ public final class DoctorView extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Please select a request");
     }
 
-    private void closeRequestButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: Change back to private once testing has been completed.
+    public void closeRequestButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         viewedRequests.setText("Closed Requests");
         requestsList.setVisible(true);
         String element;
-        String sql = "select Distinct Request.RID, Date, PUsername from Request, Message where Request.RID = Message.RID and Request.Status=? and Message.DUsername=?";
+        String sql = "select distinct Request.RID, Status, Date, PUsername from Request, Message where Request.RID = Message.RID and Request.Status=?";
         model.removeAllElements();
         element = "RID        Date                                        Patient Username";
         model.addElement(element);
         try {
             pst = Database.connection.prepareStatement(sql);
             pst.setString(1, "Closed");
-            pst.setString(2, username);
             rs = pst.executeQuery();
             if (rs.next()) {
                 //JOptionPane.showMessageDialog(null, "Username and Password is correct");
-                element = rs.getString("RID") + "        " + rs.getString("Date") + "           " + rs.getString("PUsername");
+                element = rs.getString("RID") + "        " + rs.getString("Date") + "                     " + rs.getString("PUsername");
                 model.addElement(element);
                 while (rs.next()) {
-                    element = rs.getString("RID") + "        " + rs.getString("Date") + "           " + rs.getString("PUsername");
+                    element = rs.getString("RID") + "        " + rs.getString("Date") + "                     " + rs.getString("PUsername");
                     model.addElement(element);
                 }
                 requestsList.setModel(model);
             } else {
-                JOptionPane.showMessageDialog(null, "No requests have been closed.");
+                JOptionPane.showMessageDialog(null, "No requests are Closed");
 
             }
         } catch (SQLException | HeadlessException e) {
@@ -349,12 +349,12 @@ public final class DoctorView extends javax.swing.JFrame {
         }
     }
 
-    private void requestsListValueChanged(javax.swing.event.ListSelectionEvent evt) {
+    // TODO: Change back to private once testing has been completed.
+    public void requestsListValueChanged(javax.swing.event.ListSelectionEvent evt) {
         // TODO add your handling code here:
-        if (requestsList.getSelectedIndex() == -1) {
-            //Nothing was selected.  Do nothing
-        } else
+        if (requestsList.getSelectedIndex() != -1) {
             index = requestsList.getSelectedIndex();
+        }
     }
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {

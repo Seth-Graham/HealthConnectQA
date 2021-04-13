@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="HealthConnectDB">
-  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.20">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.21">
     <root id="1">
       <ServerVersion>3.34.0</ServerVersion>
     </root>
@@ -1335,11 +1335,13 @@
     </argument>
     <column id="494" parent="170" name="Username">
       <Position>1</Position>
-      <DataType>VARCHAR|0s</DataType>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
     <column id="495" parent="170" name="Password">
       <Position>2</Position>
-      <DataType>VARCHAR|0s</DataType>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
     <column id="496" parent="171" name="RID">
       <Position>1</Position>
@@ -1362,15 +1364,18 @@
     </column>
     <column id="500" parent="172" name="Name">
       <Position>1</Position>
-      <DataType>VARCHAR|0s</DataType>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="501" parent="172" name="username">
+    <column id="501" parent="172" name="Username">
       <Position>2</Position>
-      <DataType>VARCHAR|0s</DataType>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="502" parent="172" name="password">
+    <column id="502" parent="172" name="Password">
       <Position>3</Position>
-      <DataType>VARCHAR|0s</DataType>
+      <DataType>VARCHAR(255)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
     <column id="503" parent="173" name="RID">
       <Position>1</Position>

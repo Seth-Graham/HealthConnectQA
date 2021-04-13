@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DoctorViewTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-04-06T22:56:44" hostname="LAPTOP-OBBMJB27" time="2.586">
+<testsuite name="DoctorViewTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-04-13T19:16:30" hostname="SETHSDESKTOP" time="4.613">
   <properties/>
-  <testcase name="getSetRID()" classname="DoctorViewTest" time="0.02"/>
-  <testcase name="newRequestButtonActionPerformedFailed()" classname="DoctorViewTest" time="0.781"/>
-  <testcase name="newRequestButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.642"/>
-  <testcase name="inProgressButtonActionPerformedFailed()" classname="DoctorViewTest" time="0.584"/>
-  <testcase name="inProgressButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.539"/>
-  <testcase name="getUserType()" classname="DoctorViewTest" time="0.008"/>
-  <testcase name="getUsername()" classname="DoctorViewTest" time="0.009"/>
-  <system-out><![CDATA[SQLException in isRequestAvailable: [SQLITE_ERROR] SQL error or missing database (no such column: Request)
+  <testcase name="openSelectedButtonActionPerformedFailed()" classname="DoctorViewTest" time="1.997"/>
+  <testcase name="openSelectedButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.293"/>
+  <testcase name="getSetRID()" classname="DoctorViewTest" time="0.093"/>
+  <testcase name="closeRequestButtonActionPerformedFailed()" classname="DoctorViewTest" time="0.563"/>
+  <testcase name="newRequestButtonActionPerformedFailed()" classname="DoctorViewTest" time="0.583"/>
+  <testcase name="closeRequestButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.124"/>
+  <testcase name="newRequestButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.121"/>
+  <testcase name="inProgressButtonActionPerformedFailed()" classname="DoctorViewTest" time="0.593"/>
+  <testcase name="inProgressButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.115"/>
+  <testcase name="getUserType()" classname="DoctorViewTest" time="0.072"/>
+  <testcase name="getUsername()" classname="DoctorViewTest" time="0.054"/>
+  <system-out><![CDATA[Connection to database has been established.
 false
-SQLException in isRequestAvailable: [SQLITE_ERROR] SQL error or missing database (no such column: Request)
 false
+true
+true
+false
+true
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
