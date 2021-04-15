@@ -16,12 +16,9 @@ public class Database {
                 connection = DriverManager.getConnection(dbFileLocation, username, password);
                 System.out.println("Connection to database has been established.");
 
-            } catch (ClassNotFoundException e) {
+            } catch (ClassNotFoundException | SQLException e) {
                 e.printStackTrace();
                 System.out.println("Could not find the Driver.");
-
-            } catch (SQLException se) {
-                se.printStackTrace();
             }
         }
         return connection;

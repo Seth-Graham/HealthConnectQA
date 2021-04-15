@@ -258,17 +258,10 @@ public class RequestConversation extends javax.swing.JFrame {
                     pst.setString(2, temp);
                     pst.execute();
                 }
-
-
-            } catch (SQLException | HeadlessException e) {
+                rs.close();
+                pst.close();
+            } catch (SQLException e) {
                 JOptionPane.showMessageDialog(null, e);
-            } finally {
-                try {
-                    rs.close();
-                    pst.close();
-                } catch (SQLException e) {
-                    JOptionPane.showMessageDialog(null, e);
-                }
             }
         }
 
@@ -285,15 +278,10 @@ public class RequestConversation extends javax.swing.JFrame {
                 pst.setString(1, temp);
                 pst.execute();
                 JOptionPane.showMessageDialog(null, "Request has been closed.");
-            } catch (SQLException | HeadlessException e) {
+                rs.close();
+                pst.close();
+            } catch (SQLException e) {
                 JOptionPane.showMessageDialog(null, e);
-            } finally {
-                try {
-                    rs.close();
-                    pst.close();
-                } catch (SQLException e) {
-                    JOptionPane.showMessageDialog(null, e);
-                }
             }
 
             if ("Doctor".equals(userType)) {

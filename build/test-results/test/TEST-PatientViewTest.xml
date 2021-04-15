@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PatientViewTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2021-04-15T03:21:57" hostname="LAPTOP-OBBMJB27" time="8.006">
+<testsuite name="PatientViewTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2021-04-15T22:13:27" hostname="SETHSDESKTOP" time="5.862">
   <properties/>
-  <testcase name="openSelectedButtonActionPerformedFailed()" classname="PatientViewTest" time="3.787"/>
-  <testcase name="testMain()" classname="PatientViewTest" time="0.09"/>
-  <testcase name="openSelectedButtonActionPerformedPassed()" classname="PatientViewTest" time="0.247"/>
-  <testcase name="initComponentsPassed()" classname="PatientViewTest" time="0.085"/>
-  <testcase name="backButtonPressed()" classname="PatientViewTest" time="0.17"/>
-  <testcase name="getSetRID()" classname="PatientViewTest" time="0.087"/>
-  <testcase name="closeRequestButtonActionPerformedFailed()" classname="PatientViewTest" time="1.31"/>
-  <testcase name="newRequestButtonActionPerformedFailed()" classname="PatientViewTest" time="0.785"/>
-  <testcase name="closeRequestButtonActionPerformedPassed()" classname="PatientViewTest" time="0.166"/>
-  <testcase name="newRequestButtonActionPerformedPassed()" classname="PatientViewTest" time="0.163"/>
-  <testcase name="inProgressButtonActionPerformedFailed()" classname="PatientViewTest" time="0.725"/>
-  <testcase name="inProgressButtonActionPerformedPassed()" classname="PatientViewTest" time="0.182"/>
-  <testcase name="getUserType()" classname="PatientViewTest" time="0.115"/>
-  <testcase name="getUsername()" classname="PatientViewTest" time="0.088"/>
-  <system-out><![CDATA[false
+  <testcase name="openSelectedButtonActionPerformedFailed()" classname="PatientViewTest" time="2.31"/>
+  <testcase name="testMain()" classname="PatientViewTest" time="0.136"/>
+  <testcase name="openSelectedButtonActionPerformedPassed()" classname="PatientViewTest" time="0.266"/>
+  <testcase name="initComponentsPassed()" classname="PatientViewTest" time="0.063"/>
+  <testcase name="backButtonPressed()" classname="PatientViewTest" time="0.148"/>
+  <testcase name="getSetRID()" classname="PatientViewTest" time="0.061"/>
+  <testcase name="closeRequestButtonActionPerformedFailed()" classname="PatientViewTest" time="0.82"/>
+  <testcase name="newRequestButtonActionPerformedFailed()" classname="PatientViewTest" time="0.938"/>
+  <testcase name="closeRequestButtonActionPerformedPassed()" classname="PatientViewTest" time="0.126"/>
+  <testcase name="newRequestButtonActionPerformedPassed()" classname="PatientViewTest" time="0.124"/>
+  <testcase name="inProgressButtonActionPerformedFailed()" classname="PatientViewTest" time="0.631"/>
+  <testcase name="inProgressButtonActionPerformedPassed()" classname="PatientViewTest" time="0.125"/>
+  <testcase name="getUserType()" classname="PatientViewTest" time="0.058"/>
+  <testcase name="getUsername()" classname="PatientViewTest" time="0.052"/>
+  <system-out><![CDATA[Connection to database has been established.
+false
 false
 true
 true
 false
 true
 ]]></system-out>
-  <system-err><![CDATA[Apr 14, 2021 11:22:01 PM PatientView main
+  <system-err><![CDATA[Apr 15, 2021 6:13:30 PM PatientView main
 SEVERE: null
 java.lang.ClassNotFoundException: Nimbus
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
@@ -32,7 +33,7 @@ java.lang.ClassNotFoundException: Nimbus
 	at java.base/java.lang.Class.forName(Class.java:398)
 	at java.desktop/javax.swing.SwingUtilities.loadSystemClass(SwingUtilities.java:2036)
 	at java.desktop/javax.swing.UIManager.setLookAndFeel(UIManager.java:632)
-	at PatientView.main(PatientView.java:343)
+	at PatientView.main(PatientView.java:327)
 	at PatientViewTest.testMain(PatientViewTest.java:189)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -105,7 +106,7 @@ java.lang.ClassNotFoundException: Nimbus
 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
 	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
 	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
 	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:132)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

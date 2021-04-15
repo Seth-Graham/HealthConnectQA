@@ -188,19 +188,11 @@ public class NewRequests extends javax.swing.JFrame {
                     pst.setString(3, timestamp);
                     pst.setString(4, "New");
                     pst.execute();
+
+                    rs.close();
+                    pst.close();
                 } catch (SQLException e) {
                     JOptionPane.showMessageDialog(null, e);
-
-                } catch (HeadlessException e) {
-                    e.printStackTrace();
-                    JOptionPane.showMessageDialog(null, e);
-                } finally {
-                    try {
-                        rs.close();
-                        pst.close();
-                    } catch (SQLException e) {
-                        JOptionPane.showMessageDialog(null, e);
-                    }
                 }
                 PatientView j = new PatientView(userID);
                 j.setVisible(true);

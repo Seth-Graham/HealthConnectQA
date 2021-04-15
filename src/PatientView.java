@@ -217,17 +217,11 @@ public final class PatientView extends javax.swing.JFrame {
                 jList1.setModel(model);
             } else {
                 JOptionPane.showMessageDialog(null, "No requests are in progress.");
-
             }
-        } catch (SQLException | HeadlessException e) {
+            rs.close();
+            pst.close();
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
-        } finally {
-            try {
-                rs.close();
-                pst.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
-            }
         }
     }
 
@@ -258,15 +252,10 @@ public final class PatientView extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "No new requests.");
 
             }
-        } catch (SQLException | HeadlessException e) {
+            rs.close();
+            pst.close();
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
-        } finally {
-            try {
-                rs.close();
-                pst.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
-            }
         }
     }
 
@@ -297,15 +286,10 @@ public final class PatientView extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "No requests have been closed.");
 
             }
-        } catch (SQLException | HeadlessException e) {
+            rs.close();
+            pst.close();
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
-        } finally {
-            try {
-                rs.close();
-                pst.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
-            }
         }
     }
 

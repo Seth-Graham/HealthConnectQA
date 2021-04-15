@@ -176,15 +176,10 @@ public class NewJFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Incorrect username or password.  Please try again.");
 
             }
-        } catch (HeadlessException | SQLException e) {
+            rs.close();
+            pst.close();
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
-        } finally {
-            try {
-                rs.close();
-                pst.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
-            }
         }
     }
 
@@ -211,15 +206,10 @@ public class NewJFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Incorrect username or password.  Please try again.");
 
             }
-        } catch (HeadlessException | SQLException e) {
+            rs.close();
+            pst.close();
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
-        } finally {
-            try {
-                rs.close();
-                pst.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
-            }
         }
     }
 
