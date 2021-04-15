@@ -106,7 +106,8 @@ public class RequestConversation extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
-    private void initComponents() {
+    // TODO: Change back to private once testing has been completed.
+    public void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         currentRequest = new javax.swing.JTextArea();
@@ -340,12 +341,7 @@ public class RequestConversation extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+            javax.swing.UIManager.setLookAndFeel("Nimbus");
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(RequestConversation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
@@ -362,15 +358,15 @@ public class RequestConversation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify
-    private javax.swing.JButton addButton;
-    private javax.swing.JTextArea addToRequest;
-    private javax.swing.JButton backButton;
-    private javax.swing.JButton closeButton;
-    private javax.swing.JTextArea currentRequest;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    public javax.swing.JButton addButton;
+    public javax.swing.JTextArea addToRequest;
+    public javax.swing.JButton backButton;
+    public javax.swing.JButton closeButton;
+    public javax.swing.JTextArea currentRequest;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel7;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration
 }
 

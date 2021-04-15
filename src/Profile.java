@@ -148,16 +148,6 @@ public class Profile extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Profile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
         //</editor-fold>
         final NewJFrame s = new NewJFrame();
         /* Create and display the form */
@@ -170,12 +160,13 @@ public class Profile extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JButton logout;
-    private javax.swing.JButton makeRequestButton;
-    private javax.swing.JButton viewRequestButton;
-    private javax.swing.JLabel welcome;
+    // TODO: Change back to private once testing has been completed.
+    public javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jLabel5;
+    public javax.swing.JButton logout;
+    public javax.swing.JButton makeRequestButton;
+    public javax.swing.JButton viewRequestButton;
+    public javax.swing.JLabel welcome;
     // End of variables declaration
 }
 

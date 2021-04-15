@@ -63,7 +63,8 @@ public final class PatientView extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
-    private void initComponents() {
+    // TODO: Change back to private once testing has been completed.
+    public void initComponents() {
 
         InProgressButton = new javax.swing.JButton();
         closedButton = new javax.swing.JButton();
@@ -190,7 +191,8 @@ public final class PatientView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-    private void InProgressButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: Change to private once testing has been completed.
+    public void InProgressButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jLabel1.setText("Your Opened Requests");
         jList1.setVisible(true);
@@ -338,14 +340,9 @@ public final class PatientView extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+            javax.swing.UIManager.setLookAndFeel("Nimbus");
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PatientView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RequestConversation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         final NewJFrame s = new NewJFrame();
@@ -359,16 +356,17 @@ public final class PatientView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify
-    private javax.swing.JButton InProgressButton;
-    private javax.swing.JButton backButton;
-    private javax.swing.JButton closedButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JList jList1;
-    private javax.swing.JScrollBar jScrollBar1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton newButton;
-    private javax.swing.JButton openRequest;
+    // TODO: Change back to private after testing has been completed.
+    public javax.swing.JButton InProgressButton;
+    public javax.swing.JButton backButton;
+    public javax.swing.JButton closedButton;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel7;
+    public javax.swing.JList jList1;
+    public javax.swing.JScrollBar jScrollBar1;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JButton newButton;
+    public javax.swing.JButton openRequest;
     // End of variables declaration
 }
 

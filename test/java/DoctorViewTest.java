@@ -1,5 +1,6 @@
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import javax.swing.*;
@@ -132,7 +133,7 @@ class DoctorViewTest {
 
         DoctorView doctorView = new DoctorView("testDoctor");
         doctorView.inProgressButton.doClick();
-        doctorView.requestsList.setSelectedIndex(1);
+        doctorView.requestsList.clearSelection();
 
         assertTrue(doctorView.requestsList.getSelectedIndex() == -1);
 
@@ -172,4 +173,54 @@ class DoctorViewTest {
         DatabaseTestMethods.defaultRequestTable();
     }
 
+    @Test
+    void logoutActionPerformedPassed() {
+
+        DoctorView doctorView = new DoctorView("testDoctor");
+        doctorView.logout.doClick();
+
+        assertDoesNotThrow(()->{});
+    }
+
+    @Test
+    void logoutActionPerformedFailed() {
+
+        DoctorView doctorView = new DoctorView("testDoctor");
+        doctorView.logout.doClick();
+
+        assertDoesNotThrow(()->{});
+    }
+
+    @Test
+    void initComponentsPassed() {
+
+        DoctorView doctorView = new DoctorView("testDoctor");
+
+        long startTime = java.util.Calendar.getInstance().getTimeInMillis();
+        doctorView.initComponents();
+        long endTime = java.util.Calendar.getInstance().getTimeInMillis();
+
+        // Testing the GUI initialization time is less than 5 seconds.
+        assertTrue(endTime - startTime <= 5000);
+    }
+
+    @Test
+    void initComponents() {
+
+        DoctorView doctorView = new DoctorView("testDoctor");
+
+        long startTime = java.util.Calendar.getInstance().getTimeInMillis();
+        doctorView.initComponents();
+        long endTime = java.util.Calendar.getInstance().getTimeInMillis();
+
+        // Testing the GUI initialization time is less than 5 seconds.
+        assertTrue(endTime - startTime <= 5000);
+    }
+
+
+    @Test
+    @DisplayName("Calling DoctorView.main")
+    void testMain(){
+        DoctorView.main(new String[]{"arg1", "arg2", "arg3"});
+    }
 }

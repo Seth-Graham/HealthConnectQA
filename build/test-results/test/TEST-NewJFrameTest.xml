@@ -1,201 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Class DoctorViewTest</title>
-<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
-<link href="../css/style.css" rel="stylesheet" type="text/css"/>
-<script src="../js/report.js" type="text/javascript"></script>
-</head>
-<body>
-<div id="content">
-<h1>Class DoctorViewTest</h1>
-<div class="breadcrumbs">
-<a href="../index.html">all</a> &gt; 
-<a href="../packages/default-package.html">default-package</a> &gt; DoctorViewTest</div>
-<div id="summary">
-<table>
-<tr>
-<td>
-<div class="summaryGroup">
-<table>
-<tr>
-<td>
-<div class="infoBox" id="tests">
-<div class="counter">16</div>
-<p>tests</p>
-</div>
-</td>
-<td>
-<div class="infoBox" id="failures">
-<div class="counter">0</div>
-<p>failures</p>
-</div>
-</td>
-<td>
-<div class="infoBox" id="ignored">
-<div class="counter">0</div>
-<p>ignored</p>
-</div>
-</td>
-<td>
-<div class="infoBox" id="duration">
-<div class="counter">13.008s</div>
-<p>duration</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</td>
-<td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
-<p>successful</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div id="tabs">
-<ul class="tabLinks">
-<li>
-<a href="#tab0">Tests</a>
-</li>
-<li>
-<a href="#tab1">Standard output</a>
-</li>
-<li>
-<a href="#tab2">Standard error</a>
-</li>
-</ul>
-<div id="tab0" class="tab">
-<h2>Tests</h2>
-<table>
-<thead>
-<tr>
-<th>Test</th>
-<th>Method name</th>
-<th>Duration</th>
-<th>Result</th>
-</tr>
-</thead>
-<tr>
-<td class="success">closeRequestButtonActionPerformedFailed()</td>
-<td class="success">closeRequestButtonActionPerformedFailed()</td>
-<td class="success">1.027s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">closeRequestButtonActionPerformedPassed()</td>
-<td class="success">closeRequestButtonActionPerformedPassed()</td>
-<td class="success">0.164s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">getSetRID()</td>
-<td class="success">getSetRID()</td>
-<td class="success">0.147s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">getUserType()</td>
-<td class="success">getUserType()</td>
-<td class="success">0.098s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">getUsername()</td>
-<td class="success">getUsername()</td>
-<td class="success">0.097s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">inProgressButtonActionPerformedFailed()</td>
-<td class="success">inProgressButtonActionPerformedFailed()</td>
-<td class="success">1.122s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">inProgressButtonActionPerformedPassed()</td>
-<td class="success">inProgressButtonActionPerformedPassed()</td>
-<td class="success">0.168s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">initComponents()</td>
-<td class="success">initComponents()</td>
-<td class="success">0.101s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">initComponentsPassed()</td>
-<td class="success">initComponentsPassed()</td>
-<td class="success">0.090s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">logoutActionPerformedFailed()</td>
-<td class="success">logoutActionPerformedFailed()</td>
-<td class="success">2.372s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">logoutActionPerformedPassed()</td>
-<td class="success">logoutActionPerformedPassed()</td>
-<td class="success">2.779s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">newRequestButtonActionPerformedFailed()</td>
-<td class="success">newRequestButtonActionPerformedFailed()</td>
-<td class="success">0.791s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">newRequestButtonActionPerformedPassed()</td>
-<td class="success">newRequestButtonActionPerformedPassed()</td>
-<td class="success">0.166s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">openSelectedButtonActionPerformedFailed()</td>
-<td class="success">openSelectedButtonActionPerformedFailed()</td>
-<td class="success">3.416s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">openSelectedButtonActionPerformedPassed()</td>
-<td class="success">openSelectedButtonActionPerformedPassed()</td>
-<td class="success">0.270s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">Calling DoctorView.main</td>
-<td class="success">testMain()</td>
-<td class="success">0.200s</td>
-<td class="success">passed</td>
-</tr>
-</table>
-</div>
-<div id="tab1" class="tab">
-<h2>Standard output</h2>
-<span class="code">
-<pre>Connection to database has been established.
-false
-false
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="NewJFrameTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-04-15T03:21:48" hostname="LAPTOP-OBBMJB27" time="2.496">
+  <properties/>
+  <testcase name="loginAsDoctorActionPerformedFail()" classname="NewJFrameTest" time="0.905"/>
+  <testcase name="loginAsDoctorActionPerformedPass()" classname="NewJFrameTest" time="0.128"/>
+  <testcase name="testMain()" classname="NewJFrameTest" time="0.026"/>
+  <testcase name="txt_passwordActionPerformed()" classname="NewJFrameTest" time="0.029"/>
+  <testcase name="loginAsPatientActionPerformedPassed()" classname="NewJFrameTest" time="0.122"/>
+  <testcase name="initComponents()" classname="NewJFrameTest" time="0.027"/>
+  <testcase name="testGetUsername()" classname="NewJFrameTest" time="0.027"/>
+  <testcase name="txt_usernameActionPerformed()" classname="NewJFrameTest" time="0.027"/>
+  <testcase name="loginAsPatientActionPerformedFail()" classname="NewJFrameTest" time="1.197"/>
+  <system-out><![CDATA[false
 true
 true
 false
-true
-</pre>
-</span>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>Apr 14, 2021 11:21:39 PM DoctorView main
+]]></system-out>
+  <system-err><![CDATA[Apr 14, 2021 11:21:49 PM NewJFrame main
 SEVERE: null
 java.lang.ClassNotFoundException: Nimbus
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
@@ -205,8 +25,8 @@ java.lang.ClassNotFoundException: Nimbus
 	at java.base/java.lang.Class.forName(Class.java:398)
 	at java.desktop/javax.swing.SwingUtilities.loadSystemClass(SwingUtilities.java:2036)
 	at java.desktop/javax.swing.UIManager.setLookAndFeel(UIManager.java:632)
-	at DoctorView.main(DoctorView.java:381)
-	at DoctorViewTest.testMain(DoctorViewTest.java:224)
+	at NewJFrame.main(NewJFrame.java:246)
+	at NewJFrameTest.testMain(NewJFrameTest.java:152)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -296,19 +116,5 @@ java.lang.ClassNotFoundException: Nimbus
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-</pre>
-</span>
-</div>
-</div>
-<div id="footer">
-<p>
-<div>
-<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
-<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
-</label>
-</div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.1</a> at Apr 14, 2021, 11:22:49 PM</p>
-</div>
-</div>
-</body>
-</html>
+]]></system-err>
+</testsuite>

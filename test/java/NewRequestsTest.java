@@ -55,7 +55,7 @@ class NewRequestsTest {
         assertEquals(newRequests.count, DatabaseTestMethods.getMaxRID());
         assertTrue(DatabaseTestMethods.isMessageAvailable("\n" +
                 "Test for createButtonActionPerformedPassingValues().\n" +
-                " Added by Patient testPatient"));
+                " Added by Patient stg"));
     }
 
     @Test
@@ -105,7 +105,7 @@ class NewRequestsTest {
     }
 
     @Test
-    @DisplayName("Calling Login.main")
+    @DisplayName("Calling NewRequests.main")
     void testMain(){
         NewRequests.main(new String[]{"arg1", "arg2", "arg3"});
     }

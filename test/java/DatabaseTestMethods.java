@@ -56,7 +56,7 @@ public class DatabaseTestMethods {
         }
     }
 
-    public static boolean isRIDAvailable(String testString) {
+    public static boolean isRIDAvailableRequest(String testString) {
         boolean returnVal = false;
 
         try {
@@ -69,7 +69,27 @@ public class DatabaseTestMethods {
             if (rs.next()) returnVal = true;
 
         } catch (SQLException e) {
-            System.out.println("SQLException in isRequestAvailable: " + e.getMessage());
+            System.out.println("SQLException in isRIDAvailableRequest: " + e.getMessage());
+        }
+
+        System.out.println(returnVal);
+        return returnVal;
+    }
+
+    public static boolean isRIDAvailableMessage(String testString) {
+        boolean returnVal = false;
+
+        try {
+
+            PreparedStatement pst = Database.connection.prepareStatement("select * from Message where RID = ?");
+            pst.setString(1, testString);
+
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) returnVal = true;
+
+        } catch (SQLException e) {
+            System.out.println("SQLException in isRIDAvailableMessage: " + e.getMessage());
         }
 
         System.out.println(returnVal);
@@ -91,6 +111,21 @@ public class DatabaseTestMethods {
 
         System.out.println(returnVal);
         return returnVal;
+    }
+
+    public static String getStatus(String rid) {
+        String result = "";
+
+        try {
+            PreparedStatement pst = Database.connection.prepareStatement("SELECT Status FROM Request WHERE RID = ?");
+            pst.setString(1, rid);
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) result = rs.getString("Status");
+        } catch (SQLException e) {
+            System.out.println("SQLException in getStatus(): " + e.getMessage());
+        }
+        return result;
     }
 
 
@@ -232,6 +267,7 @@ public class DatabaseTestMethods {
 
             insertMessage("100", "drstg", "This is a test 1.");
             insertMessage("101", "drstg", "This is a test 2.");
+            insertMessage("101", "drstg", "This is a test 2a.");
             insertMessage("102", "drstg", "This is a test 3.");
             insertMessage("103", "drstg", "This is a test 4.");
             insertMessage("104", "drstg", "This is a test 5.");

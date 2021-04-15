@@ -61,7 +61,8 @@ public final class DoctorView extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
-    private void initComponents() {
+    // TODO: Change back to private once testing has been completed.
+    public void initComponents() {
 
         jLabel5 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -352,12 +353,11 @@ public final class DoctorView extends javax.swing.JFrame {
     // TODO: Change back to private once testing has been completed.
     public void requestsListValueChanged(javax.swing.event.ListSelectionEvent evt) {
         // TODO add your handling code here:
-        if (requestsList.getSelectedIndex() != -1) {
             index = requestsList.getSelectedIndex();
-        }
     }
 
-    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {
+    // TODO: Change back to private once testing has finished.
+    public void logoutActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         int pane = JOptionPane.showConfirmDialog(null, "Are you sure you want to logout?", "Logout", JOptionPane.YES_NO_OPTION);
         if (pane == 0) {
@@ -376,17 +376,12 @@ public final class DoctorView extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DoctorView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
         //</editor-fold>
+        try {
+            javax.swing.UIManager.setLookAndFeel("Nimbus");
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(RequestConversation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
         final NewJFrame s = new NewJFrame();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

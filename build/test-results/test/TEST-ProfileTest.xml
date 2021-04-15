@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ProfileTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-04-15T03:22:05" hostname="LAPTOP-OBBMJB27" time="3.006">
+  <properties/>
+  <testcase name="testMain()" classname="ProfileTest" time="0.007"/>
+  <testcase name="logoutActionPerformedFailed()" classname="ProfileTest" time="2.208"/>
+  <testcase name="logoutActionPerformedPassed()" classname="ProfileTest" time="0.605"/>
+  <testcase name="makeRequestButtonActionPerformed()" classname="ProfileTest" time="0.093"/>
+  <testcase name="viewRequestButtonActionPerformed()" classname="ProfileTest" time="0.091"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

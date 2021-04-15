@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="HealthConnectDB" uuid="f1228fb2-3faa-4a26-9960-40f97bb3fa7e">
+    <data-source source="LOCAL" name="HealthConnectDB" uuid="521b9f22-474b-4315-9b2f-7403baabbf1b">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:D:\GithubRepository\HealthConnectQA\src\resources\HealthConnectDB.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\setht\Documents\GitHub\HealthConnectQA\src\resources\HealthConnectDB.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
