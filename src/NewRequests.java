@@ -16,7 +16,7 @@ public class NewRequests extends javax.swing.JFrame {
     int count = 100;
 
     /**
-     * Creates new form NewRequests
+     * Creates new form NewRequests and allows a patient to create a new request for the doctor to view
      *
      * @param new_userID
      */
@@ -156,6 +156,12 @@ public class NewRequests extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
+    /**
+     * This method handles the event when the Create Request button is clicked, which will take the contents
+     * from the JTextArea and turn it into a message to add to the database with the appropriate database
+     * attributes.
+     * @param evt
+     */
     // TODO: Change back to private once finished testing.
     public void createButtonActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -204,7 +210,11 @@ public class NewRequests extends javax.swing.JFrame {
         }
 
 
-
+    /**
+     * This method handles the event when the Cancel request button is clicked on the request form,
+     * which discards the current request and returns to the Profile of the user.
+     * @param evt
+     */
         // TODO: Make private once finished testing.
     public void CancelButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
