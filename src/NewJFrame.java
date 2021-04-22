@@ -152,6 +152,11 @@ public class NewJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
+    /**
+     * This method handles the event when the Login as patient button is clicked, which allows
+     * a patient to log in with their credentials if they are in the database.
+     * @param evt
+     */
     // TODO: Set method to public once testing is finished.
     public void LoginAsPatientActionPerformed(java.awt.event.ActionEvent evt) {
         Database.getConnection();
@@ -181,6 +186,11 @@ public class NewJFrame extends javax.swing.JFrame {
         } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
+    /**
+     * This method handles the event when the Doctor attempts to log into the system, it will check
+     * if the credentials entered match any user in the database.
+     * @param evt
+     */
     // TODO: Set to private once testing has finished.
     public void LoginAsDoctorActionPerformed(java.awt.event.ActionEvent evt) {
 

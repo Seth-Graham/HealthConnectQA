@@ -211,6 +211,11 @@ public final class DoctorView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
+    /**
+     * This method will be used to handle the event when the new request button is clicked on the doctor view.
+     * which will show any new requests to the doctor.
+     * @param evt
+     */
     // TODO: Change back to private once finished testing.
     public void newRequestButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
@@ -243,6 +248,11 @@ public final class DoctorView extends javax.swing.JFrame {
         } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
+    /**
+     * This method will handle the event when the In Progress button is clicked, which will
+     * display any requests currently in progress.
+     * @param evt
+     */
     // TODO: Change back to private after testing has been finished.
     public void inProgressButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
@@ -275,6 +285,11 @@ public final class DoctorView extends javax.swing.JFrame {
         } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
+    /**
+     * This method will handle the event when the open selected button is clicked, in order for the method
+     * to open a request, a request must be selected from the list of requests.
+     * @param evt
+     */
     // TODO: Change back to private once testing has been finished.
     public void openSelectedButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
@@ -295,6 +310,11 @@ public final class DoctorView extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Please select a request");
     }
 
+    /**
+     * This method handles the event when the close request button is clicked, which will show the doctor
+     * any closed requests.
+     * @param evt
+     */
     // TODO: Change back to private once testing has been completed.
     public void closeRequestButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
@@ -327,12 +347,20 @@ public final class DoctorView extends javax.swing.JFrame {
         } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
+    /**
+     * This method handles the event when a request is clicked when from list of requests
+     * @param evt
+     */
     // TODO: Change back to private once testing has been completed.
     public void requestsListValueChanged(javax.swing.event.ListSelectionEvent evt) {
         // TODO add your handling code here:
             index = requestsList.getSelectedIndex();
     }
 
+    /**
+     * This method handles the event when the logout button is clicked, which logs the doctor out of the system
+     * @param evt
+     */
     // TODO: Change back to private once testing has finished.
     public void logoutActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:

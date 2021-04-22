@@ -190,6 +190,11 @@ public final class PatientView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
+    /**
+     * This method will handle the event when the In Progress button is clicked, which will select
+     * the users Requests from the database where the status has been set to "In Progress"
+     * @param evt
+     */
     // TODO: Change to private once testing has been completed.
     public void InProgressButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
@@ -222,6 +227,11 @@ public final class PatientView extends javax.swing.JFrame {
         } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
+    /**
+     * This method will handle the event when the New Request button is clicked, which will select
+     * the users Requests from the database where the status has been set to "New"
+     * @param evt
+     */
     private void newButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jLabel1.setText("Your New Requests");
@@ -253,6 +263,11 @@ public final class PatientView extends javax.swing.JFrame {
             pst.close();
         } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
+    /**
+     * This method will handle the event when the Closed Requests button is clicked, which will select
+     * the users Requests from the database where the status has been set to "Closed"
+     * @param evt
+     */
 
     private void closedButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
@@ -286,6 +301,11 @@ public final class PatientView extends javax.swing.JFrame {
         } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
+    /**
+     * This method will handle the event when the back button is clicked, which will return the user
+     * to the previous menu.
+     * @param evt
+     */
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         dispose();
@@ -293,6 +313,12 @@ public final class PatientView extends javax.swing.JFrame {
         p.setVisible(true);
     }
 
+    /**
+     * This method will handle the event when the open request button is clicked,
+     * which will open the selected request from the list.
+     *
+     * @param evt
+     */
     private void openRequestActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (jList1.getSelectedIndex() != -1) {

@@ -16,7 +16,7 @@ public class RequestConversation extends javax.swing.JFrame {
     String element;
 
     /**
-     * Creates new form RequestConversation
+     * Creates new form RequestConversation which allows communication between the doctor and the patient
      *
      * @param new_requestID
      * @param new_userID
@@ -201,6 +201,11 @@ public class RequestConversation extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
+    /**
+     * This method hanldes the event when the add button actions is clicked, which enters message information into
+     * the database and assigns appropriate database values to the columns
+     * @param evt
+     */
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         int pane = JOptionPane.showConfirmDialog(null, "Are you sure you want to add your message to the request?", "Add To Request", JOptionPane.YES_NO_OPTION);
@@ -259,6 +264,11 @@ public class RequestConversation extends javax.swing.JFrame {
 
     }
 
+    /**
+     * This method handles the event when the close button action is clicked, which will close
+     * the current request and update the request to "Closed"
+     * @param evt
+     */
     private void closeButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         int pane = JOptionPane.showConfirmDialog(null, "Are you sure you want to close the request?", "Close Request", JOptionPane.YES_NO_OPTION);
@@ -288,6 +298,11 @@ public class RequestConversation extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * This method handles the event when the back button is clicked, which will return the user to either
+     * the jFrame for the doctor or patient depending on the credentials when logged in
+     * @param evt
+     */
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         try {

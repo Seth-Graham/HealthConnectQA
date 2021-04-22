@@ -115,6 +115,11 @@ public class Profile extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
+    /**
+     * This method handles the event when the Make Request button is clicked on the profile screen,
+     * which will open up a new NewRequests object for the user.
+     * @param evt
+     */
     private void makeRequestButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         dispose();
@@ -122,6 +127,11 @@ public class Profile extends javax.swing.JFrame {
         n.setVisible(true);
     }
 
+    /**
+     * This method handles the event when the view request button is clicked on the profile screen,
+     * which will open up a new PatientView for the user.
+     * @param evt
+     */
     private void viewRequestButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         dispose();
@@ -129,6 +139,11 @@ public class Profile extends javax.swing.JFrame {
         p.setVisible(true);
     }
 
+    /**
+     * This method handles the event when the logout button is clicked on the profile screen,
+     * which logs the user out of the system.
+     * @param evt
+     */
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         int pane = JOptionPane.showConfirmDialog(null, "Are you sure you want to logout?", "Logout", JOptionPane.YES_NO_OPTION);
