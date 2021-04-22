@@ -34,11 +34,7 @@ public class HealthConnectPractice_3 {
             //open login page
             NewJFrame s = new NewJFrame();
             s.setVisible(true);
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-
-
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
 }

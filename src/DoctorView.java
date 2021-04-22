@@ -2,8 +2,7 @@ import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.DefaultListModel;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public final class DoctorView extends javax.swing.JFrame {
     ResultSet rs = null;
@@ -241,9 +240,7 @@ public final class DoctorView extends javax.swing.JFrame {
             }
             rs.close();
             pst.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
     // TODO: Change back to private after testing has been finished.
@@ -275,9 +272,7 @@ public final class DoctorView extends javax.swing.JFrame {
             }
             rs.close();
             pst.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
     // TODO: Change back to private once testing has been finished.
@@ -291,9 +286,8 @@ public final class DoctorView extends javax.swing.JFrame {
             try {
                 rs.close();
                 pst.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
-            }
+            } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
+
             RequestConversation r = new RequestConversation(requestID, username, userType);
             dispose();
             r.setVisible(true);
@@ -330,9 +324,7 @@ public final class DoctorView extends javax.swing.JFrame {
             }
             rs.close();
             pst.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
     // TODO: Change back to private once testing has been completed.
@@ -362,11 +354,13 @@ public final class DoctorView extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         //</editor-fold>
-        try {
-            javax.swing.UIManager.setLookAndFeel("Nimbus");
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RequestConversation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+        SwingUtilities.invokeLater(()->{
+            try {
+                UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+            } catch (Exception e) {
+                // If Nimbus is not available, you can set the GUI to another look and feel.
+            }
+        });
         NewJFrame s = new NewJFrame();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

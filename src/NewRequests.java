@@ -33,14 +33,11 @@ public class NewRequests extends javax.swing.JFrame {
             rs = statement.executeQuery(sql);
             while (rs.next())
                 count++;
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        } finally {
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
+        finally {
             try {
                 rs.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
-            }
+            } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
         }
 
         RequestID.setText("RequestID: " + count);
@@ -191,9 +188,8 @@ public class NewRequests extends javax.swing.JFrame {
 
                     rs.close();
                     pst.close();
-                } catch (SQLException e) {
-                    JOptionPane.showMessageDialog(null, e);
-                }
+                } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
+
                 PatientView j = new PatientView(userID);
                 j.setVisible(true);
                 dispose();

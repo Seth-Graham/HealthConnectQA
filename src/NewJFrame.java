@@ -178,9 +178,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
             rs.close();
             pst.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
     // TODO: Set to private once testing has finished.
@@ -208,9 +206,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
             rs.close();
             pst.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
     // TODO: Set to private once testing has finished.

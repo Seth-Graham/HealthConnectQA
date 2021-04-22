@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class RequestConversation extends javax.swing.JFrame {
     int requestNumber;
@@ -31,9 +31,8 @@ public class RequestConversation extends javax.swing.JFrame {
             Database.getConnection();
             //JOptionPane.showMessageDialog (null, "Connected");
             Statement statement = Database.connection.createStatement();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
+
         String sql = "select * from Message where RID=?";
         try {
             pst = Database.connection.prepareStatement(sql);
@@ -66,15 +65,12 @@ public class RequestConversation extends javax.swing.JFrame {
                 pst.execute();
             }
 
-        } catch (HeadlessException | SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
+        } catch (HeadlessException | SQLException e) { JOptionPane.showMessageDialog(null, e);
         } finally {
             try {
                 rs.close();
                 pst.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
-            }
+            } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
         }
 
         sql = "select Status from Request where RID =?";
@@ -87,14 +83,12 @@ public class RequestConversation extends javax.swing.JFrame {
                 closeButton.setEnabled(false);
                 addButton.setEnabled(false);
             }
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e);
         } finally {
             try {
                 rs.close();
                 pst.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
+            } catch (SQLException e) { JOptionPane.showMessageDialog(null, e);
             }
         }
     }
@@ -260,9 +254,7 @@ public class RequestConversation extends javax.swing.JFrame {
                 }
                 rs.close();
                 pst.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
-            }
+            } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
         }
 
     }
@@ -280,9 +272,7 @@ public class RequestConversation extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Request has been closed.");
                 rs.close();
                 pst.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
-            }
+            } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
 
             if ("Doctor".equals(userType)) {
                 NewJFrame n = new NewJFrame();
@@ -303,9 +293,7 @@ public class RequestConversation extends javax.swing.JFrame {
         try {
             rs.close();
             pst.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
         if ("Doctor".equals(userType)) {
             NewJFrame n = new NewJFrame();
             DoctorView d = new DoctorView(userID);
@@ -328,11 +316,12 @@ public class RequestConversation extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
-        try {
-            javax.swing.UIManager.setLookAndFeel("Nimbus");
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RequestConversation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+        SwingUtilities.invokeLater(()->{
+            try {
+                UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+            } catch (Exception ignored) {
+            }
+        });
         //</editor-fold>
         NewJFrame n = new NewJFrame();
         final DoctorView d = new DoctorView(n.getUsername());

@@ -9,6 +9,9 @@ public class DatabaseTestMethods {
 
     // **** Request Table Methods ****
 
+    /**
+     * Create the default request table for use in the tests.
+     */
     public static void defaultRequestTable() {
         // Set the database to the expected default state.
         try {
@@ -36,6 +39,13 @@ public class DatabaseTestMethods {
         }
     }
 
+    /**
+     * Method to insert new requests into the request table.
+     *
+     * @param rid
+     * @param status
+     * @param pUsername
+     */
     public static void insertRequest(String rid, String status, String pUsername) {
 
         String sql = "INSERT INTO Request(RID, Status, Date, PUsername) VALUES(?, ?, ?, ?)";
@@ -56,6 +66,12 @@ public class DatabaseTestMethods {
         }
     }
 
+    /**
+     * Check to see if the input string is located within the request table.
+     *
+     * @param testString Desired RID
+     * @return true/false
+     */
     public static boolean isRIDAvailableRequest(String testString) {
         boolean returnVal = false;
 
@@ -76,6 +92,12 @@ public class DatabaseTestMethods {
         return returnVal;
     }
 
+    /**
+     * Check to see if the RID is located within the Message table.
+     *
+     * @param testString Desired RID.
+     * @return true/false.
+     */
     public static boolean isRIDAvailableMessage(String testString) {
         boolean returnVal = false;
 
@@ -96,6 +118,12 @@ public class DatabaseTestMethods {
         return returnVal;
     }
 
+    /**
+     * Method to return if the desired status is located within the status table.
+     *
+     * @param testString Desired status.
+     * @return true/false.
+     */
     public static boolean isStatusAvailable(String testString) {
         boolean returnVal = false;
 
@@ -113,6 +141,12 @@ public class DatabaseTestMethods {
         return returnVal;
     }
 
+    /**
+     *Method to return the status of the desired Message from the Message table.
+     *
+     * @param rid RID of desired message.
+     * @return String value of the status.
+     */
     public static String getStatus(String rid) {
         String result = "";
 
@@ -128,7 +162,9 @@ public class DatabaseTestMethods {
         return result;
     }
 
-
+    /**
+     * Method used to clear the request table.
+     */
     public static void wipeRequests() {
 
         try {
@@ -141,7 +177,38 @@ public class DatabaseTestMethods {
         }
     }
 
+    /**
+     * method used to determine the largest RID located within the Test table.
+     *
+     * @return Maximum RID int.
+     */
+    public static int getMaxRID() {
+        int maxID = 0;
+
+        try {
+            Database.getConnection();
+            Statement s = Database.connection.createStatement();
+
+            String sql = "SELECT MAX(RID) FROM Request";
+            s.execute(sql);
+            ResultSet rs = s.getResultSet();
+
+            while (rs.next()) {
+                maxID = rs.getInt(1);
+            }
+            rs.close();
+            s.close();
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+        return maxID;
+    }
+
     // **** Patient Table Methods ****
+
+    /**
+     * Generate the default patient table used for testing.
+     */
     public static void defaultPatientTable() {
         // Set the database to the expected default state.
         try {
@@ -161,6 +228,13 @@ public class DatabaseTestMethods {
         }
     }
 
+    /**
+     * Method used to insert a new patient into the Patient table.
+     *
+     * @param name String value for patient name.
+     * @param username String value for patient username.
+     * @param password String value for patient password.
+     */
     public static void insertPatient(String name, String username, String password) {
 
         try {
@@ -176,6 +250,12 @@ public class DatabaseTestMethods {
         }
     }
 
+    /**
+     * Method used to determine if the desired patient exists within the Patient table.
+     *
+     * @param testString String value of the desired patient.
+     * @return true/false.
+     */
     public static boolean isPatientAvailable(String testString) {
         boolean returnVal = false;
 
@@ -197,6 +277,10 @@ public class DatabaseTestMethods {
     }
 
     // **** Doctor Table Methods ****
+
+    /**
+     * Method used to generate the default Doctor table used for testing.
+     */
     public static void defaultDoctorTable() {
         // Set the database to the expected default state.
         try {
@@ -215,6 +299,12 @@ public class DatabaseTestMethods {
         }
     }
 
+    /**
+     * Method used to insert a new doctor into the Doctor table.
+     *
+     * @param username String value of the doctors username.
+     * @param password String value of the doctors password.
+     */
     public static void insertDoctor(String username, String password) {
 
         try {
@@ -229,6 +319,12 @@ public class DatabaseTestMethods {
         }
     }
 
+    /**
+     * Method used to determine whether a doctor already exists within the Doctor table.
+     *
+     * @param testString String value of the desired doctor.
+     * @return true/false.
+     */
     public static boolean isDoctorAvailable(String testString) {
         boolean returnVal = false;
 
@@ -250,6 +346,10 @@ public class DatabaseTestMethods {
     }
 
     // **** Message Table Methods ****
+
+    /**
+     * Method used to generate the default message table used for testing.
+     */
     public static void defaultMessageTable() {
         // Set the database to the expected default state.
         try {
@@ -276,6 +376,13 @@ public class DatabaseTestMethods {
         }
     }
 
+    /**
+     * Method used to insert a new message into the Message table.
+     *
+     * @param rid String value of the desired RID.
+     * @param dUsername String value of the desired doctors username.
+     * @param message String value of the new message.
+     */
     public static void insertMessage(String rid, String dUsername, String message) {
 
         try {
@@ -294,28 +401,12 @@ public class DatabaseTestMethods {
         }
     }
 
-    public static int getMaxRID() {
-        int maxID = 0;
-
-        try {
-            Database.getConnection();
-            Statement s = Database.connection.createStatement();
-
-            String sql = "SELECT MAX(RID) FROM Request";
-            s.execute(sql);
-            ResultSet rs = s.getResultSet();
-
-            while (rs.next()) {
-                maxID = rs.getInt(1);
-            }
-            rs.close();
-            s.close();
-        } catch (SQLException se) {
-            se.printStackTrace();
-        }
-        return maxID;
-    }
-
+    /**
+     * Method used to determine whether a message exists within the Message table.
+     *
+     * @param testString String value of the desired message.
+     * @return true/false.
+     */
     public static boolean isMessageAvailable(String testString) {
         boolean returnVal = false;
 

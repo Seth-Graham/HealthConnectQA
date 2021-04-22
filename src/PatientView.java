@@ -2,8 +2,7 @@ import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.DefaultListModel;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public final class PatientView extends javax.swing.JFrame {
     ResultSet rs = null;
@@ -220,9 +219,7 @@ public final class PatientView extends javax.swing.JFrame {
             }
             rs.close();
             pst.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
     private void newButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -254,9 +251,7 @@ public final class PatientView extends javax.swing.JFrame {
             }
             rs.close();
             pst.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
     private void closedButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -288,9 +283,7 @@ public final class PatientView extends javax.swing.JFrame {
             }
             rs.close();
             pst.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+        } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
     }
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -323,11 +316,12 @@ public final class PatientView extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
-        try {
-            javax.swing.UIManager.setLookAndFeel("Nimbus");
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RequestConversation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+        SwingUtilities.invokeLater(()->{
+            try {
+                UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+            } catch (Exception ignored) {
+            }
+        });
         //</editor-fold>
         final NewJFrame s = new NewJFrame();
         /* Create and display the form */
