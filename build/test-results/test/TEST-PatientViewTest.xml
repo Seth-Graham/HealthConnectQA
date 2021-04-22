@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PatientViewTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2021-04-22T14:14:39" hostname="SETHSDESKTOP" time="6.496">
+<testsuite name="PatientViewTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2021-04-22T18:57:04" hostname="SETHSDESKTOP" time="5.04">
   <properties/>
-  <testcase name="openSelectedButtonActionPerformedFailed()" classname="PatientViewTest" time="2.72"/>
-  <testcase name="testMain()" classname="PatientViewTest" time="0.06"/>
-  <testcase name="openSelectedButtonActionPerformedPassed()" classname="PatientViewTest" time="0.21"/>
-  <testcase name="initComponentsPassed()" classname="PatientViewTest" time="0.068"/>
-  <testcase name="backButtonPressed()" classname="PatientViewTest" time="0.144"/>
-  <testcase name="getSetRID()" classname="PatientViewTest" time="0.062"/>
-  <testcase name="closeRequestButtonActionPerformedFailed()" classname="PatientViewTest" time="1.296"/>
-  <testcase name="newRequestButtonActionPerformedFailed()" classname="PatientViewTest" time="0.697"/>
-  <testcase name="closeRequestButtonActionPerformedPassed()" classname="PatientViewTest" time="0.134"/>
-  <testcase name="newRequestButtonActionPerformedPassed()" classname="PatientViewTest" time="0.129"/>
-  <testcase name="inProgressButtonActionPerformedFailed()" classname="PatientViewTest" time="0.73"/>
-  <testcase name="inProgressButtonActionPerformedPassed()" classname="PatientViewTest" time="0.122"/>
-  <testcase name="getUserType()" classname="PatientViewTest" time="0.059"/>
-  <testcase name="getUsername()" classname="PatientViewTest" time="0.063"/>
+  <testcase name="openSelectedButtonActionPerformedFailed()" classname="PatientViewTest" time="1.93"/>
+  <testcase name="testMain()" classname="PatientViewTest" time="0.054"/>
+  <testcase name="openSelectedButtonActionPerformedPassed()" classname="PatientViewTest" time="0.201"/>
+  <testcase name="initComponentsPassed()" classname="PatientViewTest" time="0.063"/>
+  <testcase name="backButtonPressed()" classname="PatientViewTest" time="0.126"/>
+  <testcase name="getSetRID()" classname="PatientViewTest" time="0.055"/>
+  <testcase name="closeRequestButtonActionPerformedFailed()" classname="PatientViewTest" time="0.664"/>
+  <testcase name="newRequestButtonActionPerformedFailed()" classname="PatientViewTest" time="0.683"/>
+  <testcase name="closeRequestButtonActionPerformedPassed()" classname="PatientViewTest" time="0.16"/>
+  <testcase name="newRequestButtonActionPerformedPassed()" classname="PatientViewTest" time="0.124"/>
+  <testcase name="inProgressButtonActionPerformedFailed()" classname="PatientViewTest" time="0.742"/>
+  <testcase name="inProgressButtonActionPerformedPassed()" classname="PatientViewTest" time="0.124"/>
+  <testcase name="getUserType()" classname="PatientViewTest" time="0.061"/>
+  <testcase name="getUsername()" classname="PatientViewTest" time="0.049"/>
   <system-out><![CDATA[false
 false
 true

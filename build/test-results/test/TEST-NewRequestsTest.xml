@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="NewRequestsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-04-22T14:14:33" hostname="SETHSDESKTOP" time="5.817">
+<testsuite name="NewRequestsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-04-22T18:56:56" hostname="SETHSDESKTOP" time="7.596">
   <properties/>
-  <testcase name="createButtonActionPerformedPassingValues()" classname="NewRequestsTest" time="2.862"/>
-  <testcase name="testMain()" classname="NewRequestsTest" time="0.131"/>
-  <testcase name="CancelButtonActionPerformed()" classname="NewRequestsTest" time="0.205"/>
-  <testcase name="testGetTextArea1()" classname="NewRequestsTest" time="0.121"/>
-  <testcase name="initComponents()" classname="NewRequestsTest" time="0.109"/>
-  <testcase name="createButtonActionPerformedBlankMessage()" classname="NewRequestsTest" time="2.387"/>
+  <testcase name="createButtonActionPerformedPassingValues()" classname="NewRequestsTest" time="4.659"/>
+  <testcase name="testMain()" classname="NewRequestsTest" time="0.128"/>
+  <testcase name="CancelButtonActionPerformed()" classname="NewRequestsTest" time="0.21"/>
+  <testcase name="testGetTextArea1()" classname="NewRequestsTest" time="0.098"/>
+  <testcase name="initComponents()" classname="NewRequestsTest" time="0.101"/>
+  <testcase name="createButtonActionPerformedBlankMessage()" classname="NewRequestsTest" time="2.399"/>
   <system-out><![CDATA[false
 true
 false
@@ -14,7 +14,7 @@ false
 false
 false
 ]]></system-out>
-  <system-err><![CDATA[Apr 22, 2021 10:14:36 AM NewRequests main
+  <system-err><![CDATA[Apr 22, 2021 2:57:01 PM NewRequests main
 SEVERE: null
 java.lang.ClassNotFoundException: Nimbus
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)

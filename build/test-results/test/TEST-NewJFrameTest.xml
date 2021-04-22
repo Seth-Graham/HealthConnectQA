@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="NewJFrameTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-04-22T14:14:30" hostname="SETHSDESKTOP" time="2.751">
+<testsuite name="NewJFrameTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-04-22T18:56:54" hostname="SETHSDESKTOP" time="2.291">
   <properties/>
-  <testcase name="loginAsDoctorActionPerformedFail()" classname="NewJFrameTest" time="1.623"/>
-  <testcase name="loginAsDoctorActionPerformedPass()" classname="NewJFrameTest" time="0.13"/>
-  <testcase name="testMain()" classname="NewJFrameTest" time="0.015"/>
-  <testcase name="txt_passwordActionPerformed()" classname="NewJFrameTest" time="0.031"/>
-  <testcase name="loginAsPatientActionPerformedPassed()" classname="NewJFrameTest" time="0.144"/>
-  <testcase name="initComponents()" classname="NewJFrameTest" time="0.021"/>
-  <testcase name="testGetUsername()" classname="NewJFrameTest" time="0.02"/>
-  <testcase name="txt_usernameActionPerformed()" classname="NewJFrameTest" time="0.018"/>
-  <testcase name="loginAsPatientActionPerformedFail()" classname="NewJFrameTest" time="0.747"/>
+  <testcase name="loginAsDoctorActionPerformedFail()" classname="NewJFrameTest" time="0.912"/>
+  <testcase name="loginAsDoctorActionPerformedPass()" classname="NewJFrameTest" time="0.115"/>
+  <testcase name="testMain()" classname="NewJFrameTest" time="0.016"/>
+  <testcase name="txt_passwordActionPerformed()" classname="NewJFrameTest" time="0.023"/>
+  <testcase name="loginAsPatientActionPerformedPassed()" classname="NewJFrameTest" time="0.113"/>
+  <testcase name="initComponents()" classname="NewJFrameTest" time="0.026"/>
+  <testcase name="testGetUsername()" classname="NewJFrameTest" time="0.021"/>
+  <testcase name="txt_usernameActionPerformed()" classname="NewJFrameTest" time="0.022"/>
+  <testcase name="loginAsPatientActionPerformedFail()" classname="NewJFrameTest" time="1.04"/>
   <system-out><![CDATA[false
 true
 true
