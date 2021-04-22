@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="NewRequestsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-04-22T12:43:16" hostname="SETHSDESKTOP" time="5.61">
+<testsuite name="NewRequestsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-04-22T14:14:33" hostname="SETHSDESKTOP" time="5.817">
   <properties/>
-  <testcase name="createButtonActionPerformedPassingValues()" classname="NewRequestsTest" time="2.546"/>
-  <testcase name="testMain()" classname="NewRequestsTest" time="0.106"/>
-  <testcase name="CancelButtonActionPerformed()" classname="NewRequestsTest" time="0.199"/>
-  <testcase name="testGetTextArea1()" classname="NewRequestsTest" time="0.131"/>
-  <testcase name="initComponents()" classname="NewRequestsTest" time="0.1"/>
-  <testcase name="createButtonActionPerformedBlankMessage()" classname="NewRequestsTest" time="2.528"/>
+  <testcase name="createButtonActionPerformedPassingValues()" classname="NewRequestsTest" time="2.862"/>
+  <testcase name="testMain()" classname="NewRequestsTest" time="0.131"/>
+  <testcase name="CancelButtonActionPerformed()" classname="NewRequestsTest" time="0.205"/>
+  <testcase name="testGetTextArea1()" classname="NewRequestsTest" time="0.121"/>
+  <testcase name="initComponents()" classname="NewRequestsTest" time="0.109"/>
+  <testcase name="createButtonActionPerformedBlankMessage()" classname="NewRequestsTest" time="2.387"/>
   <system-out><![CDATA[false
 true
 false
@@ -14,7 +14,7 @@ false
 false
 false
 ]]></system-out>
-  <system-err><![CDATA[Apr 22, 2021 8:43:18 AM NewRequests main
+  <system-err><![CDATA[Apr 22, 2021 10:14:36 AM NewRequests main
 SEVERE: null
 java.lang.ClassNotFoundException: Nimbus
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
@@ -24,7 +24,7 @@ java.lang.ClassNotFoundException: Nimbus
 	at java.base/java.lang.Class.forName(Class.java:398)
 	at java.desktop/javax.swing.SwingUtilities.loadSystemClass(SwingUtilities.java:2036)
 	at java.desktop/javax.swing.UIManager.setLookAndFeel(UIManager.java:632)
-	at NewRequests.main(NewRequests.java:222)
+	at NewRequests.main(NewRequests.java:232)
 	at NewRequestsTest.testMain(NewRequestsTest.java:180)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

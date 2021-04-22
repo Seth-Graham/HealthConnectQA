@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DoctorViewTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2021-04-22T12:43:01" hostname="SETHSDESKTOP" time="10.583">
+<testsuite name="DoctorViewTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2021-04-22T14:14:20" hostname="SETHSDESKTOP" time="10.18">
   <properties/>
-  <testcase name="openSelectedButtonActionPerformedFailed()" classname="DoctorViewTest" time="2.637"/>
-  <testcase name="testMain()" classname="DoctorViewTest" time="0.056"/>
-  <testcase name="openSelectedButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.219"/>
-  <testcase name="initComponentsPassed()" classname="DoctorViewTest" time="0.053"/>
-  <testcase name="logoutActionPerformedFailed()" classname="DoctorViewTest" time="1.704"/>
-  <testcase name="logoutActionPerformedPassed()" classname="DoctorViewTest" time="1.706"/>
-  <testcase name="getSetRID()" classname="DoctorViewTest" time="0.064"/>
-  <testcase name="closeRequestButtonActionPerformedFailed()" classname="DoctorViewTest" time="1.64"/>
-  <testcase name="newRequestButtonActionPerformedFailed()" classname="DoctorViewTest" time="1.06"/>
-  <testcase name="closeRequestButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.123"/>
-  <testcase name="newRequestButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.118"/>
-  <testcase name="inProgressButtonActionPerformedFailed()" classname="DoctorViewTest" time="0.952"/>
-  <testcase name="inProgressButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.132"/>
-  <testcase name="getUserType()" classname="DoctorViewTest" time="0.058"/>
-  <testcase name="getUsername()" classname="DoctorViewTest" time="0.057"/>
-  <system-out><![CDATA[false
+  <testcase name="openSelectedButtonActionPerformedFailed()" classname="DoctorViewTest" time="2.407"/>
+  <testcase name="testMain()" classname="DoctorViewTest" time="0.149"/>
+  <testcase name="openSelectedButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.383"/>
+  <testcase name="initComponentsPassed()" classname="DoctorViewTest" time="0.071"/>
+  <testcase name="logoutActionPerformedFailed()" classname="DoctorViewTest" time="1.734"/>
+  <testcase name="logoutActionPerformedPassed()" classname="DoctorViewTest" time="0.633"/>
+  <testcase name="getSetRID()" classname="DoctorViewTest" time="0.066"/>
+  <testcase name="closeRequestButtonActionPerformedFailed()" classname="DoctorViewTest" time="1.778"/>
+  <testcase name="newRequestButtonActionPerformedFailed()" classname="DoctorViewTest" time="1.126"/>
+  <testcase name="closeRequestButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.127"/>
+  <testcase name="newRequestButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.127"/>
+  <testcase name="inProgressButtonActionPerformedFailed()" classname="DoctorViewTest" time="1.318"/>
+  <testcase name="inProgressButtonActionPerformedPassed()" classname="DoctorViewTest" time="0.126"/>
+  <testcase name="getUserType()" classname="DoctorViewTest" time="0.062"/>
+  <testcase name="getUsername()" classname="DoctorViewTest" time="0.069"/>
+  <system-out><![CDATA[Connection to database has been established.
+false
 false
 true
 true

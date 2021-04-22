@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HealthConnectPractice_3Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-22T12:43:11" hostname="SETHSDESKTOP" time="0.013">
+<testsuite name="HealthConnectPractice_3Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-22T14:14:30" hostname="SETHSDESKTOP" time="0.016">
   <properties/>
-  <testcase name="testMain()" classname="HealthConnectPractice_3Test" time="0.013"/>
+  <testcase name="testMain()" classname="HealthConnectPractice_3Test" time="0.016"/>
   <system-out><![CDATA[Username = stg
 Password = 1234
 Username = drstg

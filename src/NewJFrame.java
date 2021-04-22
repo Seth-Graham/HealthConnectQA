@@ -1,6 +1,6 @@
 import java.awt.Toolkit;
 import java.awt.*;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import java.sql.*;
 import java.sql.ResultSet;
 
@@ -238,11 +238,12 @@ public class NewJFrame extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
-        try {
-            javax.swing.UIManager.setLookAndFeel("Nimbus");
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RequestConversation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+        SwingUtilities.invokeLater(()->{
+            try {
+                UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+            } catch (Exception ignored) {
+            }
+        });
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

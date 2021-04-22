@@ -246,17 +246,18 @@ public class RequestConversation extends javax.swing.JFrame {
                     pst.setString(1, temp);
                     pst.execute();
 
-                    currentRequest.append("\n");
-                    currentRequest.append(timestamp);
-                    currentRequest.append("\n");
-                    currentRequest.append(finalString);
-                    addToRequest.setText("");
-                    sql = "update Message set DUsername=? where RID =?";
-                    pst = Database.connection.prepareStatement(sql);
-                    pst.setString(1, userID);
-                    pst.setString(2, temp);
-                    pst.execute();
                 }
+                currentRequest.append("\n");
+                currentRequest.append(timestamp);
+                currentRequest.append("\n");
+                currentRequest.append(finalString);
+                addToRequest.setText("");
+                sql = "update Message set DUsername=? where RID =?";
+                pst = Database.connection.prepareStatement(sql);
+                pst.setString(1, userID);
+                pst.setString(2, temp);
+                pst.execute();
+
                 rs.close();
                 pst.close();
             } catch (SQLException e) { JOptionPane.showMessageDialog(null, e); }
